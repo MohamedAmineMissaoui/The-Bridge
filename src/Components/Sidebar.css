@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.nav-btn {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 20%;
+  height: 100%;
+  padding: 0 16px;
+  background-color: #ee9a4d;
+  border-right: 1px solid #2e303e;
+  transition: width 0.4s;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  padding: 0 1.25rem 0 0;
+  border-bottom: 1px solid #2e303e;
+  color: #e1ecff;
+}
+
+.sidebar .sidebar-header .nav-btn {
+  width: 54px;
+}
+
+.sidebar-logo {
+  height: 20px;
+}
+
+.sidebar .nav-btn {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  padding: 0 16px;
+  color: #e1ecff;
+  transition: background 0.3s;
+}
+
+.sidebar .nav-btn span:nth-child(2) {
+  flex: 1 1 auto;
+}
+
+.sidebar .nav-btn span {
+  transition: 0.3s;
+}
+
+.sidebar .nav-btn.active > span:nth-child(3) {
+  rotate: -180deg;
+}
+
+.sidebar .nav-btn:not(.active):hover {
+  background: #2e303e;
+}
+
+.sub-nav .nav-btn.active::before {
+  background: #e1ecff;
+}
+
+.sub-nav {
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.sub-nav .nav-btn {
+  padding-left: 54px;
+}
+
+.sub-nav .nav-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  translate: 0 -50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #e1ecff;
+}
+
+.material-symbols-outlined {
+  font-size: 22px;
+}

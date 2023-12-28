@@ -1,0 +1,6 @@
+CREATE TABLE courses (
+  id SERIAL PRIMARY KEY,
+  image BYTEA,
+  title VARCHAR(255) NOT NULL,
+  price DECIMAL(10, 2) NOT NULL
+);
